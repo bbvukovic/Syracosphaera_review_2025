@@ -1,12 +1,18 @@
-library(ggplot2)
-library(maps)
-library(mapproj)
-library(dplyr)
-library(magrittr)
-library (patchwork)
-library(ggpubr) 
-library(stringr)
-library(readxl)
+##code for visualizations in the Syracosphaeraceae diversity manuscript
+##Author: Borna Branimir Vuković
+##Oct/2024
+##R version 4.3.2
+-------------##-------------------
+
+library(ggplot2) #v3.5.2
+library(maps) #v3.4.2.1
+library(mapproj) #v1.2.11
+library(dplyr) #v1.1.4
+library(magrittr) #v2.0.3
+library (patchwork) #v1.3.1
+library(ggpubr) #v0.6.1
+library(stringr) #v1.5.1
+library(readxl) #v1.4.5
 
 balch2023 <- read_excel("Balch2023.xlsx", sheet="Sheet2") #data from the 2018 COCCOMIX dataset (https://www.science.org/doi/10.1126/sciadv.adf6973)
 data_new <- read.csv("literature_abundances0.1.3.csv")  %>%   #data from the CASCADE database, downloaded from Zenodo, from the concatenated literature datasets, CASACDE verrsion v0.1.3 (https://zenodo.org/records/13919889)
